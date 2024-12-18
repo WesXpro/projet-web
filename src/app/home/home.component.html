@@ -1,0 +1,106 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+</head>
+
+<!-- Header -->
+<header>
+  <div class="logo"><img src="" /></div>
+  <nav>
+    <ul>
+      <li><a href="home">Accueil</a></li>
+      <li><a href="stages">Offres de stages</a></li>
+      <li><a href="projet">Projets académiques</a></li>
+    </ul>
+  </nav>
+  <div class="auth-buttons">
+    <button class="btn" (click)="gotologin()">Se connecter</button>
+    <button class="btn btn-signup" (click)="gotosignup()">S'inscrire</button>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Explorez des opportunités de stages, projets académiques et mentorat</h1>
+  <p>Votre portail vers des opportunités académiques et professionnelles</p>
+  <button class="btn btn-cta" (click)="gotologin()">Rejoignez-nous</button>
+</section>
+
+<!-- Key Stats Section -->
+<section class="stats">
+  <div class="stat-item">
+    <h2>500+</h2>
+    <p>Stages offerts</p>
+  </div>
+  <div class="stat-item">
+    <h2>300+</h2>
+    <p>Mentors disponibles</p>
+  </div>
+  <div class="stat-item">
+    <h2>1000+</h2>
+    <p>Étudiants connectés</p>
+  </div>
+</section>
+
+<!-- Latest Opportunities -->
+<section class="opportunities">
+  <h2>Offres récentes</h2>
+  <div class="opportunity-grid">
+    <div class="opportunity-item">
+      <h3>Stage en Développement Web</h3>
+      <p>Entreprise ABC</p>
+      <p>Durée : 6 mois</p>
+      <button class="btn btn-details" (click)="gotologin()">
+        En savoir plus
+      </button>
+    </div>
+    <div class="opportunity-item">
+      <h3>Projet académique en IA</h3>
+      <p>Université XYZ</p>
+      <p>Date limite : 30 nov.</p>
+      <button class="btn btn-details" (click)="gotologin()">
+        En savoir plus
+      </button>
+    </div>
+    <!-- Ajouter d'autres offres ici -->
+  </div>
+  <a href="stages" class="view-all">Voir toutes les offres</a>
+</section>
+
+<div class="testimonials-section">
+  <h2 class="title">Reviews</h2>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="logo">
+      <h2>OpportuniHub</h2>
+    </div>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <nav class="footer-links">
+      <a href="#">Accueil</a>
+      <a href="#">Contacts</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      Copyright © 2024 . All Rights Reserved. — Designed with love by
+      <strong>Mohamed Oueslati et Chihebeddine Zidi </strong> as an internal
+      project
+    </p>
+    <nav>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>

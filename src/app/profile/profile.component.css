@@ -1,0 +1,77 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Barre horizontale */
+  .topbar {
+    width: 100%;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: right;
+  }
+  
+  .menu ul li {
+    margin: 0 15px;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50%;
+  }
+  
+  .menu ul li a.active,
+  .menu ul li a:hover {
+    background-color: #34495e;
+    color: #1abc9c;
+  }
+  
+  /* Contenu principal */
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .main-content section {
+    display: none;
+  }
+  
+  .main-content section#profile {
+    display: block; /* Section par défaut visible */
+  }
+  
+  .main-content h1 {
+    font-size: 24px;
+    color: #34495e;
+  }
+  
+  .main-content p {
+    color: #7f8c8d;
+  }
+  

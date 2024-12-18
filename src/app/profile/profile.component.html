@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page de Profil Étudiant</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="profile.component.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Barre horizontale -->
+      <header class="topbar">
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="#profile" class="active">
+                <i class="fas fa-user"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#offers">
+                <i class="fas fa-briefcase"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#notifications">
+                <i class="fas fa-bell"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#messages">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-sign-out-alt"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Contenu principal -->
+      <main class="main-content">
+        <section id="profile">
+          <h1>Bienvenue, Étudiant</h1>
+          <p>
+            Voici votre espace personnel. Vous pouvez accéder à votre profil,
+            consulter les offres, voir vos notifications, ou accéder à votre
+            messagerie.
+          </p>
+        </section>
+        <section id="offers">
+          <h1>Offres</h1>
+          <p>Découvrez les offres disponibles pour vous.</p>
+        </section>
+        <section id="notifications">
+          <h1>Notifications</h1>
+          <p>Consultez vos notifications ici.</p>
+        </section>
+        <section id="messages">
+          <h1>Messagerie</h1>
+          <p>Vérifiez vos messages ici.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<script>
+  // Sélectionner les liens et sections
+  const links = document.querySelectorAll(".menu ul li a");
+  const sections = document.querySelectorAll("section");
+
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Supprimer la classe active de tous les liens
+      links.forEach((link) => link.classList.remove("active"));
+
+      // Ajouter la classe active au lien cliqué
+      link.classList.add("active");
+
+      // Afficher uniquement la section correspondante
+      const target = document.querySelector(link.getAttribute("href"));
+      sections.forEach((section) => (section.style.display = "none"));
+      target.style.display = "block";
+    });
+  });
+
+  // Par défaut, n'afficher que la section Profil
+  sections.forEach((section, index) => {
+    section.style.display = index === 0 ? "block" : "none";
+  });
+</script>

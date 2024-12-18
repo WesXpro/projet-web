@@ -1,0 +1,210 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+header {
+    background-color: #0a74da;
+    padding: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+nav .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Section recherche et filtres */
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: #0a74da;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 15px 25px;
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: #0859a4;
+}
+
+/* Filtres */
+.filter-options {
+    display: flex;
+    align-items: center;
+}
+
+.filter-options select {
+    padding: 12px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+.filter-options select:focus {
+    border-color: #0a74da;
+}
+
+/* Section offres de stage */
+.offer-list {
+    margin: 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.offer-list h2 {
+    margin-bottom: 25px;
+    color: #0a74da;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Grille d'offres */
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.offer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.offer h3 {
+    color: #0a74da;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.offer button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    align-self: flex-start;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.offer button:hover {
+    background-color: #218838;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .offer-list h2 {
+        font-size: 24px;
+    }
+
+    .offer h3 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) {
+    .offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

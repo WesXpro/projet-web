@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn</title>
+    <link rel="stylesheet" href="login.component.css" />
+    <link rel="icon" href="/assets/cover.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="signin-container">
+      <img src="/assets/logo.jpg" />
+      <form action="/login" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" required />
+          <span class="toggle-password">
+            <i class="icon-eye"></i>
+          </span>
+        </div>
+        <button type="submit">Se connecter</button>
+        <a href="/forgot-password" class="forgot-password"
+          >Mot de passe oublié ?</a
+        >
+      </form>
+      <div class="signup-link">
+        <p>Pas encore inscrit ? <a href="signup">Créer un compte</a></p>
+      </div>
+    </div>
+  </body>
+</html>
